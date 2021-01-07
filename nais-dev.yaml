@@ -32,5 +32,7 @@ spec:
       memory: 512Mi
   env:
     - name: VEILARBPORTEFOLJE_ELASTICSEARCH_URL
-      value: https://elastic-pto-veilarbportefolje-nav-dev.aivencloud.com
+      value: https://elastic-pto-veilarbportefolje-nav-dev.aivencloud.com:26482
+  elastic:
+    instance: veilarbportefolje
 

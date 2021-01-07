@@ -33,4 +33,6 @@ spec:
   env:
     - name: VEILARBPORTEFOLJE_ELASTICSEARCH_URL
       value: TODO
+  elastic:
+    instance: veilarbportefolje
 
