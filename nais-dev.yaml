@@ -35,4 +35,5 @@ spec:
       value: https://elastic-pto-veilarbportefolje-nav-dev.aivencloud.com:26482
   elastic:
     instance: veilarbportefolje
+    access: readwrite
 
