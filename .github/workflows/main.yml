@@ -63,7 +63,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy application
-        uses: nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@v1
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
