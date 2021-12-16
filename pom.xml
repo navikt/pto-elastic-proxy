@@ -18,8 +18,8 @@
     <description>Midlertidig proxy for å kalle Aiven fra FSS</description>
 
     <properties>
-        <java.version>11</java.version>
-        <common.version>2.2020.10.13_14.48-80e4c2dc5856</common.version>
+        <java.version>17</java.version>
+        <common.version>2.2021.09.17_07.09-67428a6422cc</common.version>
     </properties>
 
     <build>
@@ -27,6 +27,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.5</version>
             </plugin>
         </plugins>
         <finalName>pto-elastic-proxy</finalName>
@@ -45,11 +46,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-zuul -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-            <version>2.2.5.RELEASE</version>
+            <version>2.2.10.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
@@ -64,6 +67,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
             <optional>true</optional>
         </dependency>
 
@@ -78,7 +82,6 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
             <scope>test</scope>
         </dependency>
         <dependency>
