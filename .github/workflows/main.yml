@@ -48,10 +48,10 @@ jobs:
       - name: Build and push Docker image
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          run: |
-            echo ${GITHUB_TOKEN} | docker login ghcr.io --username ${GITHUB_REPOSITORY} --password-stdin
-            docker build --tag ${IMAGE} .
-            docker push ${IMAGE}
+        run: |
+          echo ${GITHUB_TOKEN} | docker login ghcr.io --username ${GITHUB_REPOSITORY} --password-stdin
+          docker build --tag ${IMAGE} .
+          docker push ${IMAGE}
 
   deploy-dev:
     name: Deploy application to dev
