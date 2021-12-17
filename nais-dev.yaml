@@ -32,8 +32,14 @@ spec:
       memory: 512Mi
   env:
     - name: VEILARBPORTEFOLJE_ELASTICSEARCH_URL
-      value: https://elastic-pto-veilarbportefolje-nav-dev.aivencloud.com:26482
+      value: https://elastic-pto-veilarbportefolje-es-nav-dev.aivencloud.com:26482
   elastic:
     instance: veilarbportefolje
     access: readwrite
+  vault:
+    enabled: true
+    paths:
+      - format: env
+        kvPath: /kv/preprod/fss/application/namespace
+        mountPath: /var/run/secrets/nais.io/vault
 
