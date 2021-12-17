@@ -2,7 +2,7 @@ name: Build, push and deploy
 on: push
 env:
   IMAGE_TAG: ${{ github.sha }}
-  IMAGE: docker.pkg.github.com/${{ github.repository }}/pto-elastic-proxy
+  IMAGE: ghcr.io/navikt/pto-elastic-proxy:${{ github.sha }}
   PRINT_PAYLOAD: true
 jobs:
   test:

@@ -6,7 +6,7 @@ metadata:
   labels:
     team: pto
 spec:
-  image: docker.pkg.github.com/navikt/pto-elastic-proxy/pto-elastic-proxy:{{version}}
+  image: {{ image }}
   port: 8080
   ingresses:
     - https://pto-elastic-proxy.dev.intern.nav.no
@@ -32,7 +32,7 @@ spec:
       memory: 512Mi
   env:
     - name: VEILARBPORTEFOLJE_ELASTICSEARCH_URL
-      value: https://elastic-pto-veilarbportefolje-nav-dev.aivencloud.com:26482
+      value: https://elastic-pto-veilarbportefolje-es-nav-dev.aivencloud.com:26482
   elastic:
     instance: veilarbportefolje-es
     access: readwrite
